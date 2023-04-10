@@ -1,0 +1,31 @@
+[package]
+name = "campaign-treasury-manager"
+version = "0.0.7"
+description = "Formfunction campaign treasury manager program."
+authors = ["Formfunction Developers"]
+repository = "https://github.com/formfunction-hq/campaign-treasury-manager"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "campaign_treasury_manager"
+
+[features]
+no-entrypoint = []
+no-idl = []
+test-bpf = []
+cpi = ["no-entrypoint"]
+default = []
+use-test-env = []
+
+[dependencies]
+anchor-lang = "0.26.0"
+anchor-spl = "0.26.0"
+bytemuck = "1.12.3"
+mpl-token-metadata = { version = "1.8.3", features = ["no-entrypoint"] }
+solana-program = "1.14.15"
+solana-security-txt = "1.0.2"
+spl-associated-token-account = { version = "1.1.2", features = [
+  "no-entrypoint",
+] }
+spl-token = { version = "3.5.0", features = ["no-entrypoint"] }

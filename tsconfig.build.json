@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["es2015", "dom"],
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": false,
+    "removeComments": false,
+    "sourceMap": true,
+  },
+  "exclude": ["src/tests", "src/scripts"]
+}
